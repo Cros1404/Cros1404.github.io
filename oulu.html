@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    #head {
+        width: 50%;
+    }
+</style>
+
+<head>
+    <title>NorthKino</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body id="body">
+    <ul>
+        <li>
+            <a href="#logo" id="logo">
+                NorthKino
+            </a>
+        </li>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Movies</a>
+            <div class="dropdown-content">
+                <a href="oulu.html" class="active">Oulu</a>
+                <a href="helsinki.html">Helsinki</a>
+                <a href="turku.html">Turku</a>
+                <a href="tampere.html">Tampere</a>
+                <a href="rovaniemi.html">Rovaniemi</a>
+            </div>
+        </li>
+        <li>
+            <a href="prices.html">Prices</a>
+        </li>
+    </ul>
+    <div id="box">
+        <div id="black"></div>
+        <p id="head">
+            Movies in
+            <strong>Oulu</strong> today
+        </p>
+        <div class="mov" id="tesFt">
+            <div class="mov-whole">
+                <div class="mov-info">
+                    <img src="m7.jpg">
+                    <div class="text">
+                        <h2>Star Wars: The Last Jedi</h2>
+                        <p class="genre">FANTASY/SCIENCE FICTION</p>
+                        <p class="desc">
+                            Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her
+                            powers. Meanwhile, the Resistance prepares to do battle with the First Order.
+                        </p>
+                        <div class="btn">17:00</div>
+                        <div class="btn">19:00</div>
+                        <div class="btn">22:30</div>
+                    </div>
+                </div>
+                <div id="moved-node">
+                    <div id="confirm-node">
+                        <div id="confirm-title">Murder on the Orient Express</div>
+                        <div id="confirm-time">21:30</div>
+                        <div id="calculation">2 adults + 2 kids x 9 =
+                            <strong>144,00 €</strong>
+                        </div>
+                        <hr>
+                        <form>
+                            <label for="card-holder">CARD HOLDER</label>
+                            <input type="text" id="card-holder" name="card-holder">
+                            <div id="card-number-group">
+                                <label for="card-number">CARD NUMBER</label>
+                                <input type="text" id="card-number" name="card-number">
+                            </div>
+                            <div id="ccv-group">
+                                <label for="text">CCV</label>
+                                <input type="text" id="ccv" name="ccv">
+                            </div>
+                            <div id="expiration-group">
+                                <label for="month">EXPIRATION DATE</label>
+                                <div id="month-year-group">
+                                    <input type="text" id="month" name="ccv">
+                                    <div id="backslash">/</div>
+                                    <input type="text" id="year" name="ccv">
+                                    <img src="mastercard.png" class="card-img" id="mastercard">
+                                    <img src="visa.png" class="card-img" id="visa">
+                                </div>
+                            </div>
+                            <div class="btn" id="cancel" onclick="unextend()">Cancel</div>
+                            <input type="submit" value="Confirm" class="btn" id="confirm">
+                        </form>
+                    </div>
+                    <div id="pay-node">
+                        <div id="pay-info">
+                            <h2 id="pay-title">Murder on the Orient Express 12:00</h2>
+                            <div id="type">
+                                Type of ticket:
+                                <select id="seltype">
+                                    <option>Standard</option>
+                                    <option>Child</option>
+                                    <option>Senior</option>
+                                    <option>1 adult + 2 kids</option>
+                                    <option>2 adults + 1 kid</option>
+                                    <option>2 adults + 2 kids</option>
+                                </select>
+                            </div>
+                            <div id="number">
+                                Number of tickets:
+                                <select id="selnumber">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="buy-area">
+                            <div class="btn" id="buy" onclick="if (!confirmActive) extend(this);">Buy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mov">
+            <div class="mov-whole">
+                <div class="mov-info">
+                    <img src="m1.jpg">
+                    <div class="text">
+                        <h2>Murder on the Orient Express</h2>
+                        <p class="genre">MYSTERY/CRIME</p>
+                        <p class="desc">
+                            A lavish trip through Europe quickly unfolds into a race against time to solve a murder aboard a train. When an avalanche
+                            stops the Orient Express dead in its tracks, the world's greatest detective -- Hercule Poirot
+                            -- arrives to interrogate all passengers and search for clues before the killer can strike again.
+                        </p>
+                        <div class="btn">11:00</div>
+                        <div class="btn">16:00</div>
+                        <div class="btn">21:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mov">
+            <div class="mov-whole">
+                <div class="mov-info">
+                    <img src="m2.jpg">
+                    <div class="text">
+                        <h2>Jigsaw</h2>
+                        <p class="genre">MYSTERY/CRIME</p>
+                        <p class="desc">
+                            After a series of murders bearing all the markings of the Jigsaw killer, law enforcement officials find themselves chasing
+                            the ghost of a man who has been dead for over a decade, and they become embroiled in a new game
+                            that's only just begun. Is John Kramer back from the dead to remind the world to be grateful
+                            for the gift of life? Or is this a trap set by a killer with designs of his own?
+                        </p>
+                        <div class="btn">11:30</div>
+                        <div class="btn">16:30</div>
+                        <div class="btn">21:30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mov">
+            <div class="mov-whole">
+                <div class="mov-info">
+                    <img src="m3.jpg">
+                    <div class="text">
+                        <h2>Moomins and the Winter Wonderland</h2>
+                        <p class="genre">ANIMATION/FAMILY</p>
+                        <p class="desc">
+                            The winter seems extraordinary in Moomin Valley, so Moomintroll decides to stay awake instead of having his typical winter
+                            slumber. Moomintroll discovers that strange creatures wander amidst the snowdrifts in the midwinter
+                            darkness, and all of the new hints imply that an eccentric guest is soon to arrive. This new
+                            guest is called Christmas, and an astounded Moomintroll learns to experience the true meaning
+                            of this wonderful holiday.
+                        </p>
+                        <div class="btn">12:00</div>
+                        <div class="btn">17:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mov">
+            <div class="mov-whole">
+                <div class="mov-info">
+                    <img src="m4.jpg">
+                    <div class="text">
+                        <h2>The Foreigner</h2>
+                        <p class="genre">MYSTERY/CRIME</p>
+                        <p class="desc">
+                            Quan is a humble London businessman whose long-buried past erupts in a revenge-fueled vendetta when the only person left
+                            for him to love -- his teenage daughter -- dies in a senseless act of politically motivated terrorism.
+                            His relentless search to find the terrorists leads to a cat-and-mouse conflict with a British
+                            government official whose own past may hold the clues to the identities of the elusive killers.
+                        </p>
+                        <div class="btn">13:30</div>
+                        <div class="btn">18:30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mov">
+            <div class="mov-whole">
+                <div class="mov-info">
+                    <img src="m8.jpg">
+                    <div class="text">
+                        <h2>American Assassin</h2>
+                        <p class="genre">THRILLER/ACTION</p>
+                        <p class="desc">
+                            When Cold War veteran Stan Hurley takes CIA black ops recruit Mitch Rapp under his wing, they receive an assignment to investigate
+                            a wave of random attacks on both military and civilian targets. After discovering a pattern of
+                            violence, Hurley and Rapp join forces with a lethal Turkish agent to stop a mysterious operative
+                            who wants to start a global war.
+                        </p>
+                        <div class="btn">14:30</div>
+                        <div class="btn">19:30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="TweenMax.min.js.download"></script>
+<script>
+    var boxNode = document.getElementById("box"),
+        lastButton = "",
+        payNode = document.getElementById("pay-node"), // dropdown content node
+        movedNode = document.getElementById("moved-node"),
+        confirmNode = document.getElementById("confirm-node"),
+        payTitle = document.getElementById("pay-title"),
+        selType = document.getElementById("seltype"),
+        selNumber = document.getElementById("selnumber"),
+        black = document.getElementById("black"),
+        confirmActive = false,
+        confirmTitle = document.getElementById("confirm-title"),
+        payTitle = document.getElementById("pay-title"),
+        confirmTime = document.getElementById("confirm-time"),
+        calculation = document.getElementById("calculation");
+
+    window.onload = function () {
+        TweenLite.to(document.getElementById("head"), // element
+            .7,   // duration
+            {   // tween parameters
+                opacity: 1,
+                x: 50
+            });
+
+        var buttons = document.getElementsByClassName("btn"),
+            i,
+            l = buttons.length;
+
+        for (i = 0; i < l; i++) {
+            if (buttons[i].id != "buy" && buttons[i].id != "cancel" && buttons[i].id != "confirm")
+                buttons[i].addEventListener("click", function () {
+                    if (confirmActive)
+                        unextend()
+                    dropDown(this);
+                });
+        }
+
+        var movies = document.getElementsByClassName("mov");
+        l = movies.length;
+
+        for (i = 0; i < l; i++) {
+            movies[i].style.opacity = 1;
+            movies[i].style.transform = "scale(1, 1)";
+        }
+
+    }
+
+
+    function dropDown(x) {
+
+        var movieNode = x.parentNode.parentNode.parentNode.parentNode,
+            timeline = new TimelineMax();
+
+        // if last button pressed is pressed again, it will close the dropdown
+        if (x == lastButton) {
+            TweenLite.to(payNode, // element
+                .1,   // duration
+                {   // tween parameters
+                    y: 0
+                });
+            TweenLite.to(movieNode, // element
+                .1,   // duration
+                {   // tween parameters
+                    height: "340px"
+                });
+
+            lastButton.style.backgroundColor = "";
+            lastButton = "";
+            return;
+        }
+
+        // highlight the selected time
+        x.style.backgroundColor = "rgb(14, 99, 165)";
+
+        // remove highlight from the last selected time
+        if (lastButton != "")
+            lastButton.style.backgroundColor = "";
+
+        // animate the content of pay dropdown
+        timeline.add(TweenLite.to(payNode, .1, { y: 0 }))
+            .add(TweenLite.to(payNode, .75, { y: 120, ease: Bounce.easeOut }));
+
+        // animate height of old  movie box
+        TweenLite.to(payNode.parentNode.parentNode.parentNode, // element
+            .1,   // duration
+            {   // tween parameters
+                height: "340px",
+                onComplete: function () {
+
+                    // append the pay box to the selected movie box
+                    movieNode.childNodes[1].appendChild(movedNode);
+
+                    // place the movie title and time as the heading in the dropdown
+                    payTitle.innerHTML = x.parentNode.childNodes[1].innerHTML + " " +
+                        x.innerHTML;
+
+                    // reset the type and number of tickets to default selection
+                    selType.selectedIndex = "0";
+                    selNumber.selectedIndex = "0";
+                }
+            });
+
+        // animate height of new  movie box
+        TweenLite.to(movieNode, // element
+            .75,   // duration
+            {   // tween parameters
+                height: "455px",
+                ease: Bounce.easeOut,
+                delay: .1
+            });
+
+        lastButton = x;
+    }
+
+    var pricesBeforeFive = {
+        "Standard": 6.60,
+        "Child": 4.90,
+        "Senior": 4.50,
+        "1 adult + 2 kids": 15.50,
+        "2 adults + 1 kid": 19.60,
+        "2 adults + 2 kids": 16.00
+    },
+        pricesAfterFive = {
+            "Standard": 7.30,
+            "Child": 4.90,
+            "Senior": 4.50,
+            "1 adult + 2 kids": 16.20,
+            "2 adults + 1 kid": 20.60,
+            "2 adults + 2 kids": 17.50
+        };
+
+    function extend(x) {
+        confirmActive = true;
+        var total,
+            type = selType.value,
+            number = selNumber.value,
+            movieNode = confirmNode.parentNode.parentNode.parentNode,
+            time = payTitle.innerHTML.slice(-5);;
+
+        x.style.backgroundColor = "rgb(0, 184, 0)";
+        confirmTitle.innerHTML = payTitle.innerHTML.slice(0, -5);
+        confirmTime.innerHTML = time;
+
+        if ((time.slice(0, 2) < 17) ||
+            ((time.slice(0, 2) == "17") && (time.slice(3) == "00")))
+            total = (pricesBeforeFive[type] * number).toFixed(2).replace(".", ",");
+        else
+            total = (pricesAfterFive[type] * number).toFixed(2).replace(".", ",");
+
+        calculation.innerHTML = type + " x " +
+            number + " = <strong>" + total + " €</strong>";
+
+        movieNode.style.width = "1100px";
+
+        confirmNode.style.transform = "translateX(100%)";
+
+        boxNode.style.transform = "translateX(-125%)";
+
+        black.style.zIndex = 1;
+        black.style.opacity = 0.5;
+
+
+        setTimeout(function () {
+        }, 750);
+
+        movieNode.style.zIndex = 2;
+
+    }
+
+    function unextend() {
+        confirmActive = false;
+        var movieNode = confirmNode.parentNode.parentNode.parentNode;
+
+        document.getElementById("buy").style = "unset";
+
+        confirmNode.style.transform = "translateX(0%)";
+
+        boxNode.style.transform = "translateX(-50%)";
+
+        movieNode.style.width = "100%";
+
+        black.style.opacity = 0;
+
+        setTimeout(function () {
+            black.style.zIndex = "unset";
+            movieNode.style.zIndex = "unset";
+        }, 750);
+    }
+</script>
+
+</html>
