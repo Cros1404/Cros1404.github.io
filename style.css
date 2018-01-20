@@ -136,7 +136,6 @@ li:not(.dropdown),
 }
 
 .mov {
-
     margin: auto;
     height: 340px;
     overflow: hidden;
@@ -157,7 +156,6 @@ li:not(.dropdown),
 
 .mov-whole {
     width: 1100px;
-    height: 2000px;
 }
 
 img:not(.card-img) {
@@ -197,21 +195,21 @@ h2 {
 }
 
 #pay-node {
-    top: -157px;
-    left: 1px;
+    top: 11.5em;
+    left: 0.0625em;
     z-index: 0;
-    display: block;
-    float: left;
+    position: absolute;
     border-bottom: solid grey .8px;
     border-right: solid grey .8px;
     border-radius: 0 0 15px 0;
-    padding-right: 7px;
-    padding-top: 30px;
+    padding-right: 0.4375em;
+    padding-top: 1.875em;
     background: linear-gradient(white, rgb(212, 218, 221));
+    width: 46.85em;
 }
 
 #pay-info {
-    padding: 20px;
+    padding: 1.25em;
     float: left;
 }
 
@@ -275,7 +273,7 @@ select:focus {
 
 #buy-area {
     float: left;
-    padding: 25px 15px 0px 15px;
+    padding: 25px 0px 0px 15px;
 }
 
 #buy:hover {
@@ -400,8 +398,8 @@ label {
 
 #black {
     position: fixed;
-    left: -121%;
-    width: 417%;
+    left: -221%;
+    width: 800%;
     height: 2500px;
     background-color: black;
     opacity: 0;
